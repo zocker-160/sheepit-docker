@@ -13,7 +13,7 @@ RUN \
 	libglu1-mesa \
 	libxi6 \
  	libxrender1 \
-	libxfixes3 \
+	libxfixes3
 
 RUN mkdir -p /sheep/cache
 
