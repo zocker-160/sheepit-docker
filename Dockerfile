@@ -1,17 +1,11 @@
-FROM debian:stretch-slim
+FROM openjdk:8-jre-slim
 
 # File Author / Maintainer
-MAINTAINER AGSPhoenix
+MAINTAINER zocker-160
 
 RUN \
-# MAN folder needed for jre install
-     mkdir -p /usr/share/man/man1 \
-  && mkdir -p /sheep/cache \
-# Install JRE and curl
-  && apt-get update \
-  && apt-get install -y --no-install-recommends \
-	openjdk-8-jre-headless \
-	curl \
+	apt-get update \
+	&& apt-get install -y --no-install-recommends curl \
 	#Blender dependencies
 	libsdl1.2debian \
 	libxxf86vm1 \
@@ -19,7 +13,9 @@ RUN \
 	libglu1-mesa \
 	libxi6 \
  	libxrender1 \
-	libxfixes3
+	libxfixes3 \
+
+RUN mkdir -p /sheep/cache
 
 ADD startrenderer.sh /sheep/startrenderer.sh
 RUN chmod +x /sheep/startrenderer.sh
