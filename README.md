@@ -14,7 +14,7 @@ docker run -it \
  --name "Sheepit-Renderclient" \
  -e user_name=<username> \
  -e user_password=<password_or_public_key> \
- zocker160/sheepit-docker-slim:latest
+ zocker160/sheepit-slim:latest
 ```
 
 #### Usage
