@@ -19,10 +19,18 @@ docker run -it \
 
 #### Usage
 
-- `-e user_name` / `-e user_password` specify usename and password of you sheepit account
+- `-e user_name` / `-e user_password` specify usename and password of your sheepit account
 - `-e cpu=4` *(optional)* number of CPU cores being used for rendering - if not set: *autodetection*
 - `-d` *(optional)* run docker image in background; use `docker attach <container_name>` to get into the running container
+- `-h` *(optional)* set hostname
 
+#### Get into the server terminal
+
+```
+docker attach <Container_name>
+```
+press `Ctrl + c` in order to exit after finishing the current frame
+press `Ctrl + p` and then `Ctrl + q` in order to deattach from the terminal
 
 ## Extra bits
 [Docker Hub page](https://hub.docker.com/r/agsphoenix/sheepit-docker/)  
