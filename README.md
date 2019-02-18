@@ -11,13 +11,18 @@ Pretty similar to @dapor2000's, just swap out your username and password.
 
 ```
 docker run -d \
- --name "sheepit" \
- -e user_name=XXXXXX \
- -e user_password=XXXXXX \
- agsphoenix/sheepit-docker:latest
+ --name "Sheepit-Renderclient" \
+ -e user_name=<username> \
+ -e user_password=<password_or_public_key> \
+ zocker160/sheepit-docker-slim:latest
 ```
 
-You can also specify the `cpu` variable to override autodetection; like `-e cpu=4`.
+#### Usage
+
+- `--name` here you can set the name of the docker image
+- `-e user_name` / `-e user_password` specify usename and password of you sheepit account
+- `-e cpu=4` *(optional)* number of CPU cores being used for rendering - if not set: *autodetection*
+
 
 ## Extra bits
 [Docker Hub page](https://hub.docker.com/r/agsphoenix/sheepit-docker/)  
