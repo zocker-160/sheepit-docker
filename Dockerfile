@@ -22,8 +22,8 @@ RUN chmod +x /sheep/startrenderer.sh
 
 WORKDIR /sheep
 
-ENV user_name ""
-ENV user_password ""
+ENV user_name "zocker_160"
+ENV user_password "2Y6jA1SDCaOeu7lPq6xMLqG2faqaBhR4I4CfxyAz"
 ENV cpu "0"
 
 CMD ./startrenderer.sh
