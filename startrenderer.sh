@@ -18,4 +18,5 @@ if [ $cpu -eq 0 ]; then
 fi
 
 echo Starting client......
-java -jar /sheep/$latestVersion.jar -ui text -login $user_name -password $user_password -cores $cpu -cache-dir /sheep/cache
+java -jar /sheep/$latestVersion.jar -ui $ui -login $user_name -password $user_password -cores $cpu -cache-dir /sheep/cache
+# alternative UI: oneLine
