@@ -10,7 +10,7 @@ There's probably a little more room for fat trimming, since this was adapted fro
 Pretty similar to @dapor2000's, just swap out your username and password.
 
 ```
-docker run -d \
+docker run -it \
  --name "Sheepit-Renderclient" \
  -e user_name=<username> \
  -e user_password=<password_or_public_key> \
@@ -19,9 +19,9 @@ docker run -d \
 
 #### Usage
 
-- `--name` here you can set the name of the docker image
 - `-e user_name` / `-e user_password` specify usename and password of you sheepit account
 - `-e cpu=4` *(optional)* number of CPU cores being used for rendering - if not set: *autodetection*
+- `-d` *(optional)* run docker image in background; use `docker attach <container_name>` to get into the running container
 
 
 ## Extra bits
