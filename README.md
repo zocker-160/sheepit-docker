@@ -24,6 +24,7 @@ zocker160/sheepit-nvidia:latest
 
 **important:** if you don't specify `-e gpu`,  a list of all avalilable (Nvidia)-GPUs will be shown
 
+- `-e user_name` / `-e user_password` specify usename and password of your sheepit account
 - `-e cpu` to override cpu core autodetection; e.g. `-e cpu=4`
 - `--runtime=nvidia` this enables the passthrough to the GPU(s)
 - `-h` *(optional)* set hostname
@@ -33,7 +34,7 @@ zocker160/sheepit-nvidia:latest
 ```
 docker attach <Container_name>
 ```
-
+press `Ctrl + c` in order to exit after finishing the current frame
 press `Ctrl + p` and then `Ctrl + q` in order to deattach from the terminal
 
 ## Extra bits
