@@ -30,6 +30,7 @@ docker run -it \
 docker attach <Container_name>
 ```
 press `Ctrl + c` in order to exit after finishing the current frame
+
 press `Ctrl + p` and then `Ctrl + q` in order to deattach from the terminal
 
 ## Extra bits
