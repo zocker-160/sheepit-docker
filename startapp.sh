@@ -20,7 +20,8 @@ if [ -z $gpu ]; then
 	java -jar /sheep/sheepit-client.jar --show-gpu
 	echo exiting....
 else
-	java -jar /sheep/sheepit-client.jar -cache-dir /sheep/cache -cores $cpu -compute-method GPU -gpu $gpu -login $user_name -password $user_password -ui text
+	java -jar /sheep/sheepit-client.jar -cache-dir /sheep/cache -cores $cpu -compute-method GPU -gpu $gpu -login $user_name -password $user_password -ui $ui
+	# alternative UI: oneLine
 fi
 
 #java -jar /sheep/sheepit-client.jar -cores $cpu 

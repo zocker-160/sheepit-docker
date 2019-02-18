@@ -28,5 +28,6 @@ ENV user_name "zocker_160"
 ENV user_password "2Y6jA1SDCaOeu7lPq6xMLqG2faqaBhR4I4CfxyAz"
 ENV cpu "0"
 ENV gpu ""
+ENV ui "text"
 
 CMD /startapp.sh

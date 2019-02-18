@@ -28,6 +28,7 @@ zocker160/sheepit-nvidia:latest
 - `-e cpu` to override cpu core autodetection; e.g. `-e cpu=4`
 - `--runtime=nvidia` this enables the passthrough to the GPU(s)
 - `-h` *(optional)* set hostname
+- `-e ui <text/oneLine>` *(optional)* change the CLI mode; default: `text`
 
 #### Get into the server terminal
 
