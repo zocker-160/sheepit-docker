@@ -16,7 +16,7 @@ docker run -it \
  --runtime=nvidia \
  -e user_name="<username>" \
  -e user_password="<password_or_public_key>" \
- -e gpu=CUDA_<0> \
+ -e gpu=CUDA_<0/1/2/...> \
 zocker160/sheepit-nvidia:latest
 ```
 
@@ -27,8 +27,9 @@ zocker160/sheepit-nvidia:latest
 - `-e user_name` / `-e user_password` specify usename and password of your sheepit account
 - `-e cpu` to override cpu core autodetection; e.g. `-e cpu=4`
 - `--runtime=nvidia` this enables the passthrough to the GPU(s)
+- `-e gpu` specify the Nvidia GPU to use for rendering (only one at a time is possible / lanuch multiple clients for more GPUs)
 - `-h` *(optional)* set hostname
-- `-e ui <text/oneLine>` *(optional)* change the CLI mode; default: `text`
+- `-e ui=<text/oneLine>` *(optional)* change the CLI mode; default: `text`
 
 #### Get into the server terminal
 
@@ -38,6 +39,13 @@ docker attach <Container_name>
 press `Ctrl + c` in order to exit after finishing the current frame
 
 press `Ctrl + p` and then `Ctrl + q` in order to deattach from the terminal
+
+## Tags
+
+| Docker tag | CUDA version |
+| :---: | :---: |
+| `latest` | 10.1 |
+| `cuda_9` | 9.2 |
 
 ## Extra bits
 
