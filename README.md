@@ -29,7 +29,7 @@ zocker160/sheepit-nvidia:latest
 - `--runtime=nvidia` this enables the passthrough to the GPU(s)
 - `-e gpu` specify the Nvidia GPU to use for rendering (only one at a time is possible / lanuch multiple clients for more GPUs)
 - `-h` *(optional)* set hostname
-- `-e ui=<text/oneLine>` *(optional)* change the CLI mode; default: `text`
+- `-e ui=<text/oneLine>` *(optional)* change the CLI mode; options: `text`(default), `oneLine`
 
 #### Get into the server terminal
 
