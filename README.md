@@ -23,7 +23,7 @@ docker run -it \
 - `-e cpu=4` *(optional)* number of CPU cores being used for rendering - if not set: *autodetection*
 - `-d` *(optional)* run docker image in background; use `docker attach <container_name>` to get into the running container
 - `-h` *(optional)* set hostname
-- `-e ui <text/oneLine>` *(optional)* change the CLI mode; options: `text`(default), `oneLine`
+- `-e ui <text/oneLine>` *(optional)* change the CLI mode; default: `text`
 
 #### Get into the server terminal
 
