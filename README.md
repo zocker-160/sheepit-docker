@@ -13,7 +13,7 @@ Pretty similar to @dapor2000's, just swap out your username and password.
 docker run -it \
  --name "Sheepit-Renderclient" \
  -e user_name=<username> \
- -e user_password=<password_or_public_key> \
+ -e user_password=<public_key> \
  zocker160/sheepit-slim:latest
 ```
 
