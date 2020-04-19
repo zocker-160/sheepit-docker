@@ -4,20 +4,20 @@ This docker image is based on [@AGSPhoenix's](https://github.com/AGSPhoenix/shee
 
 ## Instructions
 
-In order to make this image work, you need to have [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker) installed to enable passthru on the nvidia card(s).
+In order to make this image work, you need Docker >= 19.03 and the latest [NVIDIA driver](https://github.com/NVIDIA/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-the-nvidia-driver) driver installed on your host system.
 
-You will also need to have the [Nvidia-CUDA-toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64)  to be installed.
+You also need to have the [nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#ubuntu-16041804-debian-jessiestretchbuster) installed.
 
 Start the image with:
 
 ```
 docker run -it \
  --name "Sheepit-Nvidia" \
- --runtime=nvidia \
+ --gpus all \
  -e user_name="<username>" \
  -e user_password="<password_or_public_key>" \
  -e gpu=CUDA_<0/1/2/...> \
-zocker160/sheepit-nvidia:latest
+zocker160/sheepit-nvidia:latest 
 ```
 
 #### Usage
