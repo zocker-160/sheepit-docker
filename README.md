@@ -17,7 +17,7 @@ docker run -it \
  -e user_name="<username>" \
  -e user_password="<password_or_public_key>" \
  -e gpu=CUDA_<0/1/2/...> \
-zocker160/sheepit-nvidia:latest &lt;additional_sheepit_arguments&gt;
+zocker160/sheepit-nvidia:latest <additional_sheepit_arguments>
 ```
 
 #### Usage
