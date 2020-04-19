@@ -7,6 +7,7 @@ After being appalled by @dapor2000's monstrous [1.2 GB SheepIt client](https://h
 There's probably a little more room for fat trimming, since this was adapted from an old Ubuntu VM setup script, but I'm satisfied with where things are currently.
 
 ## Instructions
+
 Pretty similar to @dapor2000's, just swap out your username and password.
 
 ```
@@ -21,6 +22,7 @@ docker run -it \
 
 - `-e user_name` / `-e user_password` specify usename and password of your sheepit account
 - `-e cpu=4` *(optional)* number of CPU cores being used for rendering - if not set: *autodetection*
+- `-m` *(optional)* set when you want to limit memory usage (example `-m 1g` for 1GB)
 - `-d` *(optional)* run docker image in background; use `docker attach <container_name>` to get into the running container
 - `-h` *(optional)* set hostname
 - `-e ui <text/oneLine>` *(optional)* change the CLI mode; default: `text`
@@ -30,11 +32,13 @@ docker run -it \
 ```
 docker attach <Container_name>
 ```
+
 press `Ctrl + c` in order to exit after finishing the current frame
 
-press `Ctrl + p` and then `Ctrl + q` in order to deattach from the terminal
+press `Ctrl + p` and then `Ctrl + q` in order to **detach** from the terminal
 
 ## Extra bits
+
 [Docker Hub page](https://hub.docker.com/r/agsphoenix/sheepit-docker/)  
 [GitHub page](https://github.com/AGSPhoenix/sheepit-docker)
 
