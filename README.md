@@ -15,17 +15,20 @@ docker run -it \
  --name "Sheepit-Renderclient" \
  -e user_name=<username> \
  -e user_password=<public_key> \
- zocker160/sheepit-slim:latest
+ zocker160/sheepit-slim:latest <additional_sheepit_arguments>
 ```
 
 #### Usage
 
 - `-e user_name` / `-e user_password` specify usename and password of your sheepit account
 - `-e cpu=4` *(optional)* number of CPU cores being used for rendering - if not set: *autodetection*
-- `-m` *(optional)* set when you want to limit memory usage (example `-m 1g` for 1GB)
 - `-d` *(optional)* run docker image in background; use `docker attach <container_name>` to get into the running container
 - `-h` *(optional)* set hostname
 - `-e ui <text/oneLine>` *(optional)* change the CLI mode; default: `text`
+
+**important:** you can also pass any **additional** argument directly to the sheepit-client by replacing `<additional_sheepit_arguments>` (e.g. `-memory 5G`)
+
+*hint: if you are using a DockerGUI like Portainer, you put those arguments into the `CMD` or `Command` field*
 
 #### Get into the server terminal
 

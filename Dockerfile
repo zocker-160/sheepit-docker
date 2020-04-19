@@ -37,4 +37,4 @@ ENV user_password "2nuZxTC1bxmkeFETiqK0RDpqKqYBcjb9EFAOH2CH"
 ENV cpu "0"
 ENV ui "text"
 
-CMD ./startrenderer.sh
+ENTRYPOINT ["./startrenderer.sh"]
