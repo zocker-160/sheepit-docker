@@ -25,27 +25,33 @@ zocker160/sheepit-nvidia:latest
 **important:** if you don't specify `-e gpu`,  a list of all avalilable (Nvidia)-GPUs will be shown
 
 - `-e user_name` / `-e user_password` specify usename and password of your sheepit account
-- `-e cpu` to override cpu core autodetection; e.g. `-e cpu=4`
-- `--runtime=nvidia` this enables the passthrough to the GPU(s)
+- `-e cpu` *(optional)* to override cpu core autodetection; e.g. `-e cpu=4`
+- 
+- `--gpus all` this enables the passthrough to the GPU(s)
 - `-e gpu` specify the Nvidia GPU to use for rendering (only one at a time is possible / lanuch multiple clients for more GPUs)
 - `-h` *(optional)* set hostname
 - `-e ui=<text/oneLine>` *(optional)* change the CLI mode; default: `text`
+
+**important:** you can also pass any **additional** argument directly to the sheepit-client by replacing `<additional_sheepit_arguments>` (e.g. `-memory 5G`)
+
+*hint: if you are using a DockerGUI like Portainer, you put those arguments into the `CMD` or `Command` field*
 
 #### Get into the server terminal
 
 ```
 docker attach <Container_name>
 ```
+
 press `Ctrl + c` in order to exit after finishing the current frame
 
-press `Ctrl + p` and then `Ctrl + q` in order to deattach from the terminal
+press `Ctrl + p` and then `Ctrl + q` in order to **detach** from the terminal
 
 ## Tags
 
 | Docker tag | CUDA version |
-| :---: | :---: |
-| `latest` | 10.1 |
-| `cuda_9` | 9.2 |
+|:----------:|:------------:|
+| `latest`   | 10.2         |
+| `cuda_9`   | 9.2          |
 
 ## Extra bits
 

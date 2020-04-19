@@ -30,4 +30,4 @@ ENV cpu "0"
 ENV gpu ""
 ENV ui "text"
 
-CMD /startapp.sh
+ENTRYPOINT ["/startapp.sh"]
