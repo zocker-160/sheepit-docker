@@ -18,6 +18,8 @@ docker run -it \
  zocker160/sheepit-slim:latest <additional_sheepit_arguments>
 ```
 
+**in order to update the sheepit client itself, you only need to restart the container, it will download the latest version on startup**
+
 #### Usage
 
 - `-e user_name` / `-e user_password` specify usename and password of your sheepit account
