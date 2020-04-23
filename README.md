@@ -20,6 +20,8 @@ docker run -it \
 zocker160/sheepit-nvidia:latest <additional_sheepit_arguments>
 ```
 
+**in order to update the sheepit client itself, you only need to restart the container, it will download the latest version on startup**
+
 #### Usage
 
 **important:** if you don't specify `-e gpu`,  a list of all avalilable (Nvidia)-GPUs will be shown
