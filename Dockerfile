@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.2-base
+FROM nvidia/cuda:11.0-base
 
 MAINTAINER zocker-160
 
@@ -19,7 +19,8 @@ RUN \
 	libglu1-mesa \
 	libxi6 \
 	libxrender1 \
-	libxfixes3
+	libxfixes3 \
+	libglu1-mesa
 
 WORKDIR /sheep
 COPY startapp.sh /startapp.sh
