@@ -9,7 +9,7 @@ RUN \
 # Install JRE and curl
   && apt-get update \
   && apt-get install -y --no-install-recommends \
-	openjdk-8-jre \
+	openjdk-11-jre \
 	curl \
 	#install Blender to get all dependencies
 	#blender
