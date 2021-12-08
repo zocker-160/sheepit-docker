@@ -66,7 +66,7 @@ press `Ctrl + p` and then `Ctrl + q` in order to **detach** from the terminal
 
 ## Extra bits
 
-[Docker Hub page](https://hub.docker.com/repository/docker/zocker160/sheepit-client)  
+[Docker Hub page](https://hub.docker.com/r/zocker160/sheepit-client)  
 [GitHub page](https://github.com/zocker-160/sheepit-docker)
 [SheepIt client repo](https://gitlab.com/sheepitrenderfarm/client/)  
 [SheepIt website](https://www.sheepit-renderfarm.com/)
