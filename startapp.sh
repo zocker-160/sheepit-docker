@@ -10,17 +10,20 @@ curl https://www.sheepit-renderfarm.com/media/applet/client-latest.php -o /sheep
 echo "finished downloading client"
 
 # Autodetect cores
-if [ $cpu -eq 0 ]; then
+if [ $cpu -eq 0 ]
+then
     echo "No core count specified, autodetected `nproc` cores."
     cpu=`nproc`
 fi
 
-if [ -z $gpu ]; then
+if [ -z $gpu ]
+then
     echo "no GPU specified, showing all connected GPUs:"
     java -jar /sheep/sheepit-client.jar --show-gpu
     echo "exiting...."
 else
-    if [ $gpu == "none" ]; then
+    if [ $gpu == "none" ]
+    then
         echo "running in CPU mode"
         java -jar /sheep/sheepit-client.jar -cache-dir /sheep/cache -cores $cpu -login $user_name -password $user_password -ui $ui "$@"
     else
