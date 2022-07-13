@@ -1,10 +1,10 @@
-FROM openjdk:11-jre-slim
+FROM eclipse-temurin:11-jre
 
-# File Author / Maintainer
 MAINTAINER zocker-160
 
 ENV DEBIAN_FRONTEND noninteractive
-
+ENV NVIDIA_VISIBLE_DEVICES all
+ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
 RUN \
     apt-get update \
@@ -27,11 +27,14 @@ RUN \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /sheep
+
 COPY startapp.sh /startapp.sh
+RUN chmod +x /startapp.sh
+
 RUN mkdir -p /sheep/cache
 
 ENV user_name "zocker_160"
-ENV user_password "2Y6jA1SDCaOeu7lPq6xMLqG2faqaBhR4I4CfxyAz"
+ENV user_password "Re85CqEhKAx937dXP19wRf2yRkvAIBemYIVhVaAx"
 ENV cpu "0"
 ENV gpu ""
 ENV ui "text"

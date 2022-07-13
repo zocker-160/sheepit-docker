@@ -5,30 +5,35 @@
 ## Instructions (CPU)
 
 Start the image with:
-```
+```bash
 docker run -it \
- --name "Sheepit-CPU" \
+ --name "Sheepit" \
  -e user_name="<username>" \
  -e user_password="<password_or_public_key>" \
-zocker160/sheepit-client:latest <additional_sheepit_arguments>
+ -e gpu=none \
+zocker160/sheepit-client <additional_sheepit_arguments>
 ```
 
 ## Instructions (GPU)
 
-In order to make this image work, you need Docker >= 19.03 and the latest [NVIDIA driver](https://github.com/NVIDIA/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-the-nvidia-driver) and `nvidia-docker2` installed on your host system.
+In order to make this image work, you need 
 
-An official guide by Nvidia can be found [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-on-ubuntu-and-debian).
+- Docker >= 19.03 
+- Nvidia GPU driver
+- `nvidia-docker2`
+
+An official guide by Nvidia can be found [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
 
 Start the image with:
 
-```
+```bash
 docker run -it \
- --name "Sheepit-Nvidia" \
+ --name "Sheepit" \
  --gpus all \
  -e user_name="<username>" \
  -e user_password="<password_or_public_key>" \
  -e gpu=CUDA_<0/1/2/...> \
-zocker160/sheepit-client:nvidia <additional_sheepit_arguments>
+zocker160/sheepit-client <additional_sheepit_arguments>
 ```
 
 #### Usage
@@ -55,14 +60,6 @@ docker attach <Container_name>
 press `Ctrl + c` in order to exit after finishing the current frame
 
 press `Ctrl + p` and then `Ctrl + q` in order to **detach** from the terminal
-
-## Tags
-
-| Docker tag | CUDA version |
-|:----------:|:------------:|
-| `latest`   | ----         |
-| `nvidia`   | 11.4         |
-| `cuda10`   | 10.2         |
 
 ## Extra bits
 

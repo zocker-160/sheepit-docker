@@ -1,13 +1,12 @@
-#!/bin/bash
+#! /usr/bin/env bash
 
-# Clear old data and cache
+echo "Cleaning up old data and cache..."
+
 rm -rf /sheep/*.jar
 rm -rf /sheep/cache/* || true
 
-# Download latest client version
-echo "Downloading latest version..."
+echo "Downloading latest sheepit client..."
 curl https://www.sheepit-renderfarm.com/media/applet/client-latest.php -o /sheep/sheepit-client.jar
-echo "finished downloading client"
 
 # Autodetect cores
 if [ $cpu -eq 0 ]
@@ -18,8 +17,9 @@ fi
 
 if [ -z $gpu ]
 then
-    echo "no GPU specified, showing all connected GPUs:"
+    echo "no GPU_ID specified, showing all supported GPUs:"
     java -jar /sheep/sheepit-client.jar --show-gpu
+    
     echo "exiting...."
 else
     if [ $gpu == "none" ]
