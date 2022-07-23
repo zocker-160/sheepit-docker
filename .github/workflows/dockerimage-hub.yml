@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  builder:
+  default:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,3 +25,20 @@ jobs:
         
         docker push zocker160/sheepit-client:latest
         docker push zocker160/sheepit-client:nvidia
+
+  vast:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: 'master'
+    - name: Build the Docker image
+      env:
+        HUB_NAME: ${{ secrets.DOCKER_NAME }}
+        HUB_KEY: ${{ secrets.DOCKER_TOKEN }}
+      run: |  
+        docker login -u $HUB_NAME -p $HUB_KEY
+        docker build . --pull --no-cache --file Dockerfile.vast --tag zocker160/sheepit-client:test
+        
+        docker push zocker160/sheepit-client:test
