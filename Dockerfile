@@ -17,7 +17,8 @@ RUN \
     libxi6 \
     libxrender1 \
     libxfixes3 \
-    libglu1-mesa
+    libglu1-mesa \
+    libxkbcommon0
 
 RUN \
     apt-get autoremove -y && \

@@ -17,12 +17,12 @@ jobs:
       env:
         HUB_NAME: ${{ secrets.DOCKER_NAME }}
         HUB_KEY: ${{ secrets.DOCKER_TOKEN }}
-      run: |  
+      run: |
         docker login -u $HUB_NAME -p $HUB_KEY
         docker build . --pull --no-cache --file Dockerfile --tag zocker160/sheepit-client:latest
-        
+
         docker tag zocker160/sheepit-client:latest zocker160/sheepit-client:nvidia
-        
+
         docker push zocker160/sheepit-client:latest
         docker push zocker160/sheepit-client:nvidia
 
@@ -37,8 +37,8 @@ jobs:
       env:
         HUB_NAME: ${{ secrets.DOCKER_NAME }}
         HUB_KEY: ${{ secrets.DOCKER_TOKEN }}
-      run: |  
+      run: |
         docker login -u $HUB_NAME -p $HUB_KEY
         docker build . --pull --no-cache --file Dockerfile.vast --tag zocker160/sheepit-client:vast
-        
+
         docker push zocker160/sheepit-client:vast
