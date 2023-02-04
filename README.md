@@ -32,7 +32,7 @@ docker run -it \
  --gpus all \
  -e user_name="<username>" \
  -e user_password="<password_or_public_key>" \
- -e gpu=CUDA_<0/1/2/...> \
+ -e gpu=OPTIX_<0/1/2/...> \
 zocker160/sheepit-client <additional_sheepit_arguments>
 ```
 
