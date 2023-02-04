@@ -20,7 +20,9 @@ RUN \
     libglu1-mesa \
     libxkbcommon0 \
     # vast ai specific stuff
-    screen
+    screen \
+    unzip \
+    7zip
 
 RUN \
     apt-get autoremove -y && \
