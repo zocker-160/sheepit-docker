@@ -4,20 +4,18 @@ MAINTAINER zocker-160
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV NVIDIA_VISIBLE_DEVICES all
-ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
+ENV NVIDIA_DRIVER_CAPABILITIES all
 
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends curl \
     # Blender dependencies
     libsdl1.2debian \
-    libxxf86vm1 \
-    libgl1-mesa-glx \
-    libglu1-mesa \
     libxi6 \
     libxrender1 \
-    libxfixes3 \
     libglu1-mesa \
+    libgl1-mesa-glx \
+    libxxf86vm1 \
     libxkbcommon0
 
 RUN \
