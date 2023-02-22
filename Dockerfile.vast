@@ -16,7 +16,7 @@ RUN \
     libglu1-mesa \
     libgl1-mesa-glx \
     libxxf86vm1 \
-    libxkbcommon0
+    libxkbcommon0 \
     # vast ai specific stuff
     screen \
     unzip \
