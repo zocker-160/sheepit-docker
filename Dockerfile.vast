@@ -9,14 +9,8 @@ ENV NVIDIA_DRIVER_CAPABILITIES all
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends curl \
-    # Blender dependencies
-    libsdl1.2debian \
-    libxi6 \
-    libxrender1 \
-    libglu1-mesa \
-    libgl1-mesa-glx \
-    libxxf86vm1 \
-    libxkbcommon0 \
+    # Blender dependencies by simply installing Blender
+    blender \
     # vast ai specific stuff
     screen \
     unzip \
