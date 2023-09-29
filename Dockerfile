@@ -10,15 +10,13 @@ RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends curl \
     # Blender dependencies
-    libglu1-mesa-dev \
     libxi6 \
     libxrender1 \
-    libfontconfig1 \
-    libxxf86vm-dev \
-    libxfixes-dev \
+    libglu1-mesa \
     libgl1-mesa-glx \
-    libsm6 \
+    libxxf86vm1 \
     libxkbcommon0 \
+    libsm6 \
     # some useful utils
     xz-utils \
     netcat \
