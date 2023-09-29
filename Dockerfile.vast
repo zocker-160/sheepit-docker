@@ -9,12 +9,24 @@ ENV NVIDIA_DRIVER_CAPABILITIES all
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends curl \
-    # Blender dependencies by simply installing Blender
-    blender \
-    # vast ai specific stuff
+    # Blender dependencies
+    libglu1-mesa-dev \
+    libxi6 \
+    libxrender1 \
+    libfontconfig1 \
+    libxxf86vm-dev \
+    libxfixes-dev \
+    libgl1-mesa-glx \
+    libsm6 \
+    libxkbcommon0 \
+    # vast ai specific stuff and utils
+    xz-utils \
+    netcat \
     screen \
     unzip \
-    7zip
+    7zip \
+    curl \
+    vim
 
 RUN \
     apt-get autoremove -y && \
