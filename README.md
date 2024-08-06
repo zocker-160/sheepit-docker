@@ -61,6 +61,29 @@ press `Ctrl + c` in order to exit after finishing the current frame
 
 press `Ctrl + p` and then `Ctrl + q` in order to **detach** from the terminal
 
+## Instructions Vast.ai
+
+- create new template
+- image path / tag: `zocker160/sheepit-client:vast`
+- version tag: `vast`
+- launch mode: `SSH`
+- on-start script:
+```bash
+screen -dmS sheep /startapp.sh -compute-method GPU -gpu OPTIX_0 -login zocker_160 -password 2nuZxTC1bxmkeFETiqK0RDpqKqYBcjb9EFAOH2CH
+```
+
+#### Parameters
+
+- `-gpu OPTIX_<0..n>`: selects GPU0 as the GPU to use for rendering
+- `-compute-method <CPU/GPU/CPU_GPU>`: CPU: CPU only, GPU: GPU only, CPU_GPU: both
+- `-login`: your sheepit username
+- `-password`: your sheepit render token (no I did not leak my password, it is a render token)
+
+### Disclaimer
+
+I am not affiliated with vast, nor do I get any benefit,
+but I personally just think, that it is a great option for sheepit, since they offer very good prices for the hardware you are getting.
+
 ## Extra bits
 
 [Docker Hub page](https://hub.docker.com/r/zocker160/sheepit-client)  
