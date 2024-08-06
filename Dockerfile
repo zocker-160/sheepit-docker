@@ -22,11 +22,12 @@ RUN \
     libsm6 \
     # some useful utils
     xz-utils \
-    netcat \
+    ncat \
     screen \
     unzip \
     7zip \
     curl \
+    micro \
     vim
 
 RUN \
