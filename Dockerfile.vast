@@ -1,4 +1,5 @@
 FROM eclipse-temurin:11-jre
+#based on Ubuntu 24.04 LTS as of 06.08.2024
 
 MAINTAINER zocker-160
 
@@ -13,10 +14,12 @@ RUN \
     libxi6 \
     libxrender1 \
     libglu1-mesa \
-    libgl1-mesa-glx \
+    libgl1 \
+    libgl1-mesa-dri \
+    libglx-mesa0 \
     libxxf86vm1 \
     libxkbcommon0 \
-    libsm6 \  
+    libsm6 \
     # vast ai specific stuff and utils
     xz-utils \
     netcat \
