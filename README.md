@@ -72,6 +72,8 @@ press `Ctrl + p` and then `Ctrl + q` in order to **detach** from the terminal
 screen -dmS sheep /startapp.sh -compute-method GPU -gpu OPTIX_0 -login zocker_160 -password 2nuZxTC1bxmkeFETiqK0RDpqKqYBcjb9EFAOH2CH
 ```
 
+or you can use [this template link](https://cloud.vast.ai/?ref_id=20494&template_id=3fbff40c4c524279d99d93df5b7ae5d6).
+
 #### Parameters
 
 - `-gpu OPTIX_<0..n>`: selects GPU0 as the GPU to use for rendering
