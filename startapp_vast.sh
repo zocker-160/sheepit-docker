@@ -13,4 +13,4 @@ cpu=`nproc`
 echo "Autodetected $cpu cores."
 
 echo "Starting client"
-java -jar /sheep/sheepit-client.jar -cache-dir /sheep/cache -cores $cpu -compute-method GPU "$@"
+java -jar /sheep/sheepit-client.jar -cache-dir /sheep/cache -cores $cpu -ui text  "$@"
