@@ -14,6 +14,11 @@ RUN \
     libxi6 \
     libxrender1 \
     libglu1-mesa \
+    libegl1 \
+    libegl1-mesa-dev \
+    libegl-amber0 \
+    libegl-dev \
+    libegl-mesa0 \
     libgl1 \
     libgl1-mesa-dri \
     libglx-mesa0 \
