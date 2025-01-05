@@ -1,5 +1,5 @@
 FROM eclipse-temurin:11-jre
-#based on Ubuntu 24.04 LTS as of 06.08.2024
+#based on Ubuntu 24.04 LTS as of 05.01.2025
 
 MAINTAINER zocker-160
 
